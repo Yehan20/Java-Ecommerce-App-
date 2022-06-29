@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.3.2 git-revision#3d0bba4. --><xs:schema xmlns:tns="http://techmartwebservices.mycompany.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://techmartwebservices.mycompany.com/">
+
+<xs:element name="addOrder" type="tns:addOrder"/>
+
+<xs:element name="addOrderResponse" type="tns:addOrderResponse"/>
+
+<xs:element name="cancelOrder" type="tns:cancelOrder"/>
+
+<xs:element name="cancelOrderResponse" type="tns:cancelOrderResponse"/>
+
+<xs:element name="createUser" type="tns:createUser"/>
+
+<xs:element name="createUserResponse" type="tns:createUserResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="loginUser" type="tns:loginUser"/>
+
+<xs:element name="loginUserResponse" type="tns:loginUserResponse"/>
+
+<xs:element name="payOrder" type="tns:payOrder"/>
+
+<xs:element name="payOrderResponse" type="tns:payOrderResponse"/>
+
+<xs:element name="viewOrder" type="tns:viewOrder"/>
+
+<xs:element name="viewOrderResponse" type="tns:viewOrderResponse"/>
+
+<xs:complexType name="addOrder">
+<xs:sequence>
+<xs:element name="order" type="tns:order" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="order">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="agentid" type="xs:string" minOccurs="0"/>
+<xs:element name="branch" type="xs:string" minOccurs="0"/>
+<xs:element name="driver" type="xs:string" minOccurs="0"/>
+<xs:element name="feedback" type="xs:string" minOccurs="0"/>
+<xs:element name="orderedamount" type="xs:int"/>
+<xs:element name="orderid" type="xs:string" minOccurs="0"/>
+<xs:element name="productid" type="xs:string" minOccurs="0"/>
+<xs:element name="productname" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="totalprice" type="xs:double"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUser">
+<xs:sequence>
+<xs:element name="customer" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="fullname" type="xs:string" minOccurs="0"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+<xs:element name="nic" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="payOrder">
+<xs:sequence>
+<xs:element name="orderId" type="xs:string" minOccurs="0"/>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="result" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="payOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewOrder">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="next" type="xs:string" minOccurs="0"/>
+<xs:element name="third" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:order" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cancelOrder">
+<xs:sequence>
+<xs:element name="orderId" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:int"/>
+<xs:element name="productId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cancelOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/TechMartWebServices/SupplierServices?wsdl" uri="wsdl/localhost_8080/TechMartWebServices/SupplierServices.wsdl"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/SupplierServices?xsd=1" uri="wsdl/localhost_8080/TechMartWebServices/SupplierServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/AdminServices?wsdl" uri="wsdl/localhost_8080/TechMartWebServices/AdminServices.wsdl"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/AdminServices?xsd=1" uri="wsdl/localhost_8080/TechMartWebServices/AdminServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/CustomerServices?wsdl" uri="wsdl/localhost_8080/TechMartWebServices/CustomerServices.wsdl"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/CustomerServices?xsd=1" uri="wsdl/localhost_8080/TechMartWebServices/CustomerServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/SalesAgentServices?wsdl" uri="wsdl/localhost_8080/TechMartWebServices/SalesAgentServices.wsdl"/>
+    <system systemId="http://localhost:8080/TechMartWebServices/SalesAgentServices?xsd=1" uri="wsdl/localhost_8080/TechMartWebServices/SalesAgentServices.xsd_1.xsd"/>
+</catalog>
